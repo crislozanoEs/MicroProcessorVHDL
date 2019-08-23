@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\VHDL\simulation\qsim
+vsistema
+Z1 !s100 bEoBBW1fZmj3Knzll6X`A1
+Z2 ID8DYCg[SU9^i8DBGSW2;I0
+Z3 VdKEAO;EZfJ[<U;Oj]Ogkb1
+Z4 dD:\VHDL\simulation\qsim
+Z5 w1542896460
+Z6 8sistema_qsim.vo
+Z7 Fsistema_qsim.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|sistema_qsim.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1542896462.590000
+Z12 !s107 sistema_qsim.vo|
+!s101 -O0
+vsistema_vlg_check_tst
+!i10b 1
+Z13 !s100 zK7mk_zO;6[QFOD2;m;;53
+Z14 I6i0md><9ne3mO18>Fj=M63
+Z15 V9ADkZDd9[<cMY=WAd1`bj0
+R4
+Z16 w1542896458
+Z17 8sistema.vt
+Z18 Fsistema.vt
+L0 69
+R8
+r1
+!s85 0
+31
+Z19 !s108 1542896467.183000
+Z20 !s107 sistema.vt|
+Z21 !s90 -work|work|sistema.vt|
+!s101 -O0
+R10
+vsistema_vlg_sample_tst
+!i10b 1
+Z22 !s100 QY^l1a6@ZFd6HhXAFZaNY0
+Z23 IH^]`[ZV`S5mBcdgU7];VX3
+Z24 VoP4^nKDTO[dd9e>YHL?;m3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vsistema_vlg_vec_tst
+!i10b 1
+!s100 gj<BE^z5>Y60DR7Q0_nQ[0
+II4`4IMB0kLGbSZ^QgLf_51
+Z25 Val[12]02>ich2[NUg6PWY0
+R4
+R16
+R17
+R18
+Z26 L0 585
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

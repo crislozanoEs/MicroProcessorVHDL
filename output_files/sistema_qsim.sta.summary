@@ -1,0 +1,161 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -13.207
+TNS   : -865.159
+
+Type  : Slow 1200mV 85C Model Setup 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -10.305
+TNS   : -125.088
+
+Type  : Slow 1200mV 85C Model Setup 'pdua:U1|MAR:u4|BUS_DIR[0]'
+Slack : -3.120
+TNS   : -152.068
+
+Type  : Slow 1200mV 85C Model Hold 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -4.054
+TNS   : -57.082
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -1.415
+TNS   : -12.923
+
+Type  : Slow 1200mV 85C Model Hold 'pdua:U1|MAR:u4|BUS_DIR[0]'
+Slack : 1.329
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -3.419
+TNS   : -26.276
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -0.689
+TNS   : -7.288
+
+Type  : Slow 1200mV 85C Model Removal 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -1.967
+TNS   : -17.422
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 1.027
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -140.495
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pdua:U1|MAR:u4|BUS_DIR[0]'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -12.245
+TNS   : -796.018
+
+Type  : Slow 1200mV 0C Model Setup 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -9.622
+TNS   : -113.677
+
+Type  : Slow 1200mV 0C Model Setup 'pdua:U1|MAR:u4|BUS_DIR[0]'
+Slack : -2.798
+TNS   : -134.657
+
+Type  : Slow 1200mV 0C Model Hold 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -3.726
+TNS   : -52.650
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -1.319
+TNS   : -12.054
+
+Type  : Slow 1200mV 0C Model Hold 'pdua:U1|MAR:u4|BUS_DIR[0]'
+Slack : 1.167
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -3.224
+TNS   : -24.802
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -0.518
+TNS   : -5.289
+
+Type  : Slow 1200mV 0C Model Removal 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -1.661
+TNS   : -14.056
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : 0.927
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -140.495
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : 0.317
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pdua:U1|MAR:u4|BUS_DIR[0]'
+Slack : 0.352
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -6.010
+TNS   : -376.219
+
+Type  : Fast 1200mV 0C Model Setup 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -4.748
+TNS   : -57.573
+
+Type  : Fast 1200mV 0C Model Setup 'pdua:U1|MAR:u4|BUS_DIR[0]'
+Slack : -1.379
+TNS   : -52.707
+
+Type  : Fast 1200mV 0C Model Hold 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -2.108
+TNS   : -38.152
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -1.085
+TNS   : -26.493
+
+Type  : Fast 1200mV 0C Model Hold 'pdua:U1|MAR:u4|BUS_DIR[0]'
+Slack : 0.588
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -1.431
+TNS   : -11.701
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : 0.158
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : -1.255
+TNS   : -9.386
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : 0.502
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -118.621
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pdua:U1|ctrl:u1|uaddr[0]'
+Slack : 0.091
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pdua:U1|MAR:u4|BUS_DIR[0]'
+Slack : 0.200
+TNS   : 0.000
+
+------------------------------------------------------------

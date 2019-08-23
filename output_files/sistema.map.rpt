@@ -1,0 +1,679 @@
+Analysis & Synthesis report for sistema
+Thu Nov 22 08:56:48 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "pdua:U1|ALU:u3"
+ 14. Port Connectivity Checks: "pdua:U1"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Nov 22 08:56:47 2018            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; sistema                                          ;
+; Top-level Entity Name              ; sistema                                          ;
+; Family                             ; Cyclone IV E                                     ;
+; Total logic elements               ; 674                                              ;
+;     Total combinational functions  ; 633                                              ;
+;     Dedicated logic registers      ; 107                                              ;
+; Total registers                    ; 107                                              ;
+; Total pins                         ; 45                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; sistema            ; sistema            ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                         ;
++----------------------------------+-----------------+-----------------+-------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path  ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------+---------+
+; Sumador.vhd                      ; yes             ; User VHDL File  ; E:/VHDL/Sumador.vhd           ;         ;
+; Selector.vhd                     ; yes             ; User VHDL File  ; E:/VHDL/Selector.vhd          ;         ;
+; Salida.vhd                       ; yes             ; User VHDL File  ; E:/VHDL/Salida.vhd            ;         ;
+; RegistroRespuesta.vhd            ; yes             ; User VHDL File  ; E:/VHDL/RegistroRespuesta.vhd ;         ;
+; RegistroCom2.vhd                 ; yes             ; User VHDL File  ; E:/VHDL/RegistroCom2.vhd      ;         ;
+; Control.vhd                      ; yes             ; User VHDL File  ; E:/VHDL/Control.vhd           ;         ;
+; ContadorProceso.vhd              ; yes             ; User VHDL File  ; E:/VHDL/ContadorProceso.vhd   ;         ;
+; Complemento2.vhd                 ; yes             ; User VHDL File  ; E:/VHDL/Complemento2.vhd      ;         ;
+; sistema.vhdl                     ; yes             ; User VHDL File  ; E:/VHDL/sistema.vhdl          ;         ;
+; ROM.vhdl                         ; yes             ; User VHDL File  ; E:/VHDL/ROM.vhdl              ;         ;
+; RAM.vhdl                         ; yes             ; User VHDL File  ; E:/VHDL/RAM.vhdl              ;         ;
+; pdua.vhdl                        ; yes             ; User VHDL File  ; E:/VHDL/pdua.vhdl             ;         ;
+; MDR.vhdl                         ; yes             ; User VHDL File  ; E:/VHDL/MDR.vhdl              ;         ;
+; MAR.vhdl                         ; yes             ; User VHDL File  ; E:/VHDL/MAR.vhdl              ;         ;
+; ctrl.vhdl                        ; yes             ; User VHDL File  ; E:/VHDL/ctrl.vhdl             ;         ;
+; banco.vhdl                       ; yes             ; User VHDL File  ; E:/VHDL/banco.vhdl            ;         ;
+; ALU.vhdl                         ; yes             ; User VHDL File  ; E:/VHDL/ALU.vhdl              ;         ;
+; ALU_BIT.vhdl                     ; yes             ; User VHDL File  ; E:/VHDL/ALU_BIT.vhdl          ;         ;
+; PM.vhd                           ; yes             ; User VHDL File  ; E:/VHDL/PM.vhd                ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 674       ;
+;                                             ;           ;
+; Total combinational functions               ; 633       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 401       ;
+;     -- 3 input functions                    ; 170       ;
+;     -- <=2 input functions                  ; 62        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 620       ;
+;     -- arithmetic mode                      ; 13        ;
+;                                             ;           ;
+; Total registers                             ; 107       ;
+;     -- Dedicated logic registers            ; 107       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 45        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 107       ;
+; Total fan-out                               ; 2639      ;
+; Average fan-out                             ; 3.18      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+; |sistema                                     ; 633 (0)           ; 107 (0)      ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |sistema                                            ; work         ;
+;    |PM:U4|                                   ; 82 (0)            ; 38 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|PM:U4                                      ; work         ;
+;       |ContadorProceso:BContadorProceso|     ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|PM:U4|ContadorProceso:BContadorProceso     ; work         ;
+;       |Control:BControl|                     ; 10 (10)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|PM:U4|Control:BControl                     ; work         ;
+;       |RegistroCom2:BRegistroCom2|           ; 7 (7)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|PM:U4|RegistroCom2:BRegistroCom2           ; work         ;
+;       |RegistroRespuesta:BRegistroRespuesta| ; 26 (26)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|PM:U4|RegistroRespuesta:BRegistroRespuesta ; work         ;
+;       |Salida:BSalida|                       ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|PM:U4|Salida:BSalida                       ; work         ;
+;       |Selector:BSelector|                   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|PM:U4|Selector:BSelector                   ; work         ;
+;       |Sumador:BSumador|                     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|PM:U4|Sumador:BSumador                     ; work         ;
+;    |RAM:U3|                                  ; 122 (122)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|RAM:U3                                     ; work         ;
+;    |pdua:U1|                                 ; 429 (0)           ; 69 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1                                    ; work         ;
+;       |ALU:u3|                               ; 96 (18)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|ALU:u3                             ; work         ;
+;          |ALU_BIT:\Slices:0:BIT0:B0|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|ALU:u3|ALU_BIT:\Slices:0:BIT0:B0   ; work         ;
+;          |ALU_BIT:\Slices:1:BITN:BN|         ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|ALU:u3|ALU_BIT:\Slices:1:BITN:BN   ; work         ;
+;          |ALU_BIT:\Slices:2:BITN:BN|         ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|ALU:u3|ALU_BIT:\Slices:2:BITN:BN   ; work         ;
+;          |ALU_BIT:\Slices:3:BITN:BN|         ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|ALU:u3|ALU_BIT:\Slices:3:BITN:BN   ; work         ;
+;          |ALU_BIT:\Slices:4:BITN:BN|         ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|ALU:u3|ALU_BIT:\Slices:4:BITN:BN   ; work         ;
+;          |ALU_BIT:\Slices:5:BITN:BN|         ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|ALU:u3|ALU_BIT:\Slices:5:BITN:BN   ; work         ;
+;          |ALU_BIT:\Slices:6:BITN:BN|         ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|ALU:u3|ALU_BIT:\Slices:6:BITN:BN   ; work         ;
+;          |ALU_BIT:\Slices:7:BITN:BN|         ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|ALU:u3|ALU_BIT:\Slices:7:BITN:BN   ; work         ;
+;       |MAR:u4|                               ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|MAR:u4                             ; work         ;
+;       |MDR:u5|                               ; 124 (124)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|MDR:u5                             ; work         ;
+;       |banco:u2|                             ; 56 (56)           ; 49 (49)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|banco:u2                           ; work         ;
+;       |ctrl:u1|                              ; 153 (153)         ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistema|pdua:U1|ctrl:u1                            ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++-----------------------------------------------------+-----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal   ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------+------------------------+
+; pdua:U1|MDR:u5|DATA_EX_out[0]$latch                 ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; pdua:U1|MDR:u5|DATA_EX_out[0]_69                    ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; pdua:U1|MDR:u5|DATA_EX_out[1]$latch                 ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; pdua:U1|MDR:u5|DATA_EX_out[2]$latch                 ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; pdua:U1|MDR:u5|DATA_EX_out[3]$latch                 ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; pdua:U1|MDR:u5|DATA_EX_out[4]$latch                 ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; pdua:U1|MDR:u5|DATA_EX_out[5]$latch                 ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; pdua:U1|MDR:u5|DATA_EX_out[6]$latch                 ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; pdua:U1|MDR:u5|DATA_EX_out[7]$latch                 ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; RAM:U3|data_out[3]$latch                            ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; RAM:U3|data_out[0]_1016                             ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; RAM:U3|data_out[7]$latch                            ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; RAM:U3|data_out[4]$latch                            ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; RAM:U3|data_out[6]$latch                            ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; RAM:U3|data_out[5]$latch                            ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; RAM:U3|data_out[0]$latch                            ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; RAM:U3|data_out[1]$latch                            ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; RAM:U3|mem[1][3]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[2][3]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[0][3]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[3][3]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[5][3]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[6][3]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[4][3]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[7][3]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|data_out[2]$latch                            ; pdua:U1|ctrl:u1|Mux16 ; yes                    ;
+; RAM:U3|mem[1][7]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[2][7]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[0][7]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[3][7]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[5][7]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[6][7]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[4][7]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[7][7]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[1][4]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[2][4]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[0][4]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[3][4]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[5][4]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[6][4]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[4][4]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[7][4]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[1][6]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[2][6]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[0][6]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[3][6]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[5][6]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[6][6]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[4][6]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[7][6]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[1][5]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[2][5]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[0][5]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[3][5]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[5][5]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[6][5]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[4][5]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[7][5]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[1][0]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[2][0]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[0][0]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[3][0]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[5][0]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[6][0]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[4][0]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[7][0]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[1][1]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[2][1]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[0][1]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[3][1]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[5][1]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[6][1]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[4][1]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[7][1]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[1][2]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[2][2]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[0][2]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[3][2]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[5][2]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[6][2]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[4][2]                                    ; RAM:U3|Mux10          ; yes                    ;
+; RAM:U3|mem[7][2]                                    ; RAM:U3|Mux10          ; yes                    ;
+; Number of user-specified and inferred latches = 82  ;                       ;                        ;
++-----------------------------------------------------+-----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; pdua:U1|banco:u2|AVI[0]                ; Stuck at GND due to stuck port data_in ;
+; pdua:U1|banco:u2|AVI[1]                ; Stuck at VCC due to stuck port data_in ;
+; pdua:U1|banco:u2|AVI[2..7]             ; Stuck at GND due to stuck port data_in ;
+; pdua:U1|banco:u2|CTE1[1..7]            ; Merged with pdua:U1|banco:u2|CTE1[0]   ;
+; Total Number of Removed Registers = 15 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 107   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 22    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 92    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; PM:U4|Control:BControl|Estado0         ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |sistema|pdua:U1|banco:u2|PC[1]                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |sistema|pdua:U1|banco:u2|SP[1]                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |sistema|pdua:U1|banco:u2|DPTR[1]                      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |sistema|pdua:U1|banco:u2|A[7]                         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |sistema|pdua:U1|banco:u2|TEMP[2]                      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |sistema|pdua:U1|banco:u2|ACC[5]                       ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |sistema|pdua:U1|ctrl:u1|uaddr[7]                      ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |sistema|pdua:U1|ALU:u3|Mux1                           ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |sistema|pdua:U1|ALU:u3|ALU_BIT:\Slices:1:BITN:BN|Mux1 ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |sistema|pdua:U1|ALU:u3|ALU_BIT:\Slices:3:BITN:BN|Mux0 ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |sistema|RAM:U3|Mux79                                  ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |sistema|RAM:U3|Mux66                                  ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |sistema|RAM:U3|Mux61                                  ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |sistema|RAM:U3|Mux51                                  ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |sistema|RAM:U3|Mux43                                  ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |sistema|RAM:U3|Mux26                                  ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |sistema|RAM:U3|Mux25                                  ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |sistema|RAM:U3|Mux9                                   ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |sistema|RAM:U3|Mux3                                   ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |sistema|pdua:U1|banco:u2|Mux56                        ;
+; 98:1               ; 8 bits    ; 520 LEs       ; 488 LEs              ; 32 LEs                 ; No         ; |sistema|pdua:U1|MDR:u5|DATA_C[5]                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pdua:U1|ALU:u3"                                                                                             ;
++------+--------+------------------+-----------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity         ; Details                                                                                             ;
++------+--------+------------------+-----------------------------------------------------------------------------------------------------+
+; s    ; Output ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Bidir" but port on entity declared as "Output" ;
++------+--------+------------------+-----------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "pdua:U1"                                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; iom  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Nov 22 08:56:34 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sistema -c sistema
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file sumador.vhd
+    Info (12022): Found design unit 1: Sumador-SumadorArch
+    Info (12023): Found entity 1: Sumador
+Info (12021): Found 2 design units, including 1 entities, in source file selector.vhd
+    Info (12022): Found design unit 1: Selector-SelectorArch
+    Info (12023): Found entity 1: Selector
+Info (12021): Found 2 design units, including 1 entities, in source file salida.vhd
+    Info (12022): Found design unit 1: Salida-SalidaArch
+    Info (12023): Found entity 1: Salida
+Info (12021): Found 2 design units, including 1 entities, in source file registrorespuesta.vhd
+    Info (12022): Found design unit 1: RegistroRespuesta-RegistroRespuestaArch
+    Info (12023): Found entity 1: RegistroRespuesta
+Info (12021): Found 2 design units, including 1 entities, in source file registrocom2.vhd
+    Info (12022): Found design unit 1: RegistroCom2-RegistroCom2Arch
+    Info (12023): Found entity 1: RegistroCom2
+Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
+    Info (12022): Found design unit 1: Control-ControlArch
+    Info (12023): Found entity 1: Control
+Info (12021): Found 2 design units, including 1 entities, in source file contadorproceso.vhd
+    Info (12022): Found design unit 1: ContadorProceso-ContadorProcesoArch
+    Info (12023): Found entity 1: ContadorProceso
+Info (12021): Found 2 design units, including 1 entities, in source file complemento2.vhd
+    Info (12022): Found design unit 1: Complemento2-Complemento2Arch
+    Info (12023): Found entity 1: Complemento2
+Warning (12019): Can't analyze file -- file Booth.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file sistema.vhdl
+    Info (12022): Found design unit 1: sistema-Behavioral
+    Info (12023): Found entity 1: sistema
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhdl
+    Info (12022): Found design unit 1: ROM-Behavioral
+    Info (12023): Found entity 1: ROM
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhdl
+    Info (12022): Found design unit 1: RAM-Behavioral
+    Info (12023): Found entity 1: RAM
+Info (12021): Found 2 design units, including 1 entities, in source file pdua.vhdl
+    Info (12022): Found design unit 1: pdua-Behavioral
+    Info (12023): Found entity 1: pdua
+Info (12021): Found 2 design units, including 1 entities, in source file mdr.vhdl
+    Info (12022): Found design unit 1: MDR-Behavioral
+    Info (12023): Found entity 1: MDR
+Info (12021): Found 2 design units, including 1 entities, in source file mar.vhdl
+    Info (12022): Found design unit 1: MAR-Behavioral
+    Info (12023): Found entity 1: MAR
+Info (12021): Found 2 design units, including 1 entities, in source file ctrl.vhdl
+    Info (12022): Found design unit 1: ctrl-Behavioral
+    Info (12023): Found entity 1: ctrl
+Info (12021): Found 2 design units, including 1 entities, in source file banco.vhdl
+    Info (12022): Found design unit 1: banco-Behavioral
+    Info (12023): Found entity 1: banco
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhdl
+    Info (12022): Found design unit 1: ALU-Bit_Slice
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 2 design units, including 1 entities, in source file alu_bit.vhdl
+    Info (12022): Found design unit 1: ALU_BIT-Behavioral
+    Info (12023): Found entity 1: ALU_BIT
+Info (12021): Found 2 design units, including 1 entities, in source file pm.vhd
+    Info (12022): Found design unit 1: PM-PMArch
+    Info (12023): Found entity 1: PM
+Info (12127): Elaborating entity "sistema" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at sistema.vhdl(81): object "iom" assigned a value but never read
+Info (12128): Elaborating entity "pdua" for hierarchy "pdua:U1"
+Info (12128): Elaborating entity "ctrl" for hierarchy "pdua:U1|ctrl:u1"
+Info (12128): Elaborating entity "banco" for hierarchy "pdua:U1|banco:u2"
+Info (12128): Elaborating entity "ALU" for hierarchy "pdua:U1|ALU:u3"
+Info (12128): Elaborating entity "ALU_BIT" for hierarchy "pdua:U1|ALU:u3|ALU_BIT:\Slices:7:BITN:BN"
+Info (12128): Elaborating entity "MAR" for hierarchy "pdua:U1|MAR:u4"
+Info (12128): Elaborating entity "MDR" for hierarchy "pdua:U1|MDR:u5"
+Warning (10631): VHDL Process Statement warning at MDR.vhdl(36): inferring latch(es) for signal or variable "DATA_EX_out", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "DATA_EX_out[0]" at MDR.vhdl(36)
+Info (10041): Inferred latch for "DATA_EX_out[1]" at MDR.vhdl(36)
+Info (10041): Inferred latch for "DATA_EX_out[2]" at MDR.vhdl(36)
+Info (10041): Inferred latch for "DATA_EX_out[3]" at MDR.vhdl(36)
+Info (10041): Inferred latch for "DATA_EX_out[4]" at MDR.vhdl(36)
+Info (10041): Inferred latch for "DATA_EX_out[5]" at MDR.vhdl(36)
+Info (10041): Inferred latch for "DATA_EX_out[6]" at MDR.vhdl(36)
+Info (10041): Inferred latch for "DATA_EX_out[7]" at MDR.vhdl(36)
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:U2"
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:U3"
+Warning (10631): VHDL Process Statement warning at RAM.vhdl(34): inferring latch(es) for signal or variable "data_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at RAM.vhdl(34): inferring latch(es) for signal or variable "mem", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "mem[0][0]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[0][1]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[0][2]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[0][3]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[0][4]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[0][5]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[0][6]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[0][7]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[1][0]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[1][1]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[1][2]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[1][3]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[1][4]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[1][5]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[1][6]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[1][7]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[2][0]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[2][1]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[2][2]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[2][3]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[2][4]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[2][5]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[2][6]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[2][7]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[3][0]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[3][1]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[3][2]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[3][3]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[3][4]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[3][5]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[3][6]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[3][7]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[4][0]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[4][1]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[4][2]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[4][3]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[4][4]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[4][5]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[4][6]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[4][7]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[5][0]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[5][1]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[5][2]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[5][3]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[5][4]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[5][5]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[5][6]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[5][7]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[6][0]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[6][1]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[6][2]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[6][3]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[6][4]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[6][5]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[6][6]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[6][7]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[7][0]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[7][1]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[7][2]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[7][3]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[7][4]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[7][5]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[7][6]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "mem[7][7]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "data_out[0]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "data_out[1]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "data_out[2]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "data_out[3]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "data_out[4]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "data_out[5]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "data_out[6]" at RAM.vhdl(34)
+Info (10041): Inferred latch for "data_out[7]" at RAM.vhdl(34)
+Info (12128): Elaborating entity "PM" for hierarchy "PM:U4"
+Info (12128): Elaborating entity "ContadorProceso" for hierarchy "PM:U4|ContadorProceso:BContadorProceso"
+Info (12128): Elaborating entity "RegistroCom2" for hierarchy "PM:U4|RegistroCom2:BRegistroCom2"
+Info (12128): Elaborating entity "RegistroRespuesta" for hierarchy "PM:U4|RegistroRespuesta:BRegistroRespuesta"
+Info (12128): Elaborating entity "Sumador" for hierarchy "PM:U4|Sumador:BSumador"
+Info (12128): Elaborating entity "Complemento2" for hierarchy "PM:U4|Complemento2:BComplemento2"
+Warning (10540): VHDL Signal Declaration warning at Complemento2.vhd(39): used explicit default value for signal "n" because signal was never assigned a value
+Info (12128): Elaborating entity "Selector" for hierarchy "PM:U4|Selector:BSelector"
+Info (12128): Elaborating entity "Salida" for hierarchy "PM:U4|Salida:BSalida"
+Info (12128): Elaborating entity "Control" for hierarchy "PM:U4|Control:BControl"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "datai[7]" into a selector
+    Warning (13048): Converted tri-state node "datai[6]" into a selector
+    Warning (13048): Converted tri-state node "datai[5]" into a selector
+    Warning (13048): Converted tri-state node "datai[4]" into a selector
+    Warning (13048): Converted tri-state node "datai[3]" into a selector
+    Warning (13048): Converted tri-state node "datai[2]" into a selector
+    Warning (13048): Converted tri-state node "datai[1]" into a selector
+    Warning (13048): Converted tri-state node "datai[0]" into a selector
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "pdua:U1|MDR:u5|DATA_EX_out[0]" to the node "RAM:U3|mem[7][0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "pdua:U1|MDR:u5|DATA_EX_out[1]" to the node "RAM:U3|mem[7][1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "pdua:U1|MDR:u5|DATA_EX_out[2]" to the node "RAM:U3|mem[7][2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "pdua:U1|MDR:u5|DATA_EX_out[3]" to the node "RAM:U3|mem[7][3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "pdua:U1|MDR:u5|DATA_EX_out[4]" to the node "RAM:U3|mem[7][4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "pdua:U1|MDR:u5|DATA_EX_out[5]" to the node "RAM:U3|mem[7][5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "pdua:U1|MDR:u5|DATA_EX_out[6]" to the node "RAM:U3|mem[7][6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "pdua:U1|MDR:u5|DATA_EX_out[7]" to the node "RAM:U3|mem[7][7]" into an OR gate
+Warning (13012): Latch pdua:U1|MDR:u5|DATA_EX_out[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+Warning (13012): Latch pdua:U1|MDR:u5|DATA_EX_out[0]_69 has unsafe behavior
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+Warning (13012): Latch pdua:U1|MDR:u5|DATA_EX_out[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+Warning (13012): Latch pdua:U1|MDR:u5|DATA_EX_out[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+Warning (13012): Latch pdua:U1|MDR:u5|DATA_EX_out[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+Warning (13012): Latch pdua:U1|MDR:u5|DATA_EX_out[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+Warning (13012): Latch pdua:U1|MDR:u5|DATA_EX_out[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+Warning (13012): Latch pdua:U1|MDR:u5|DATA_EX_out[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+Warning (13012): Latch pdua:U1|MDR:u5|DATA_EX_out[7]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal pdua:U1|ctrl:u1|uaddr[3]
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 731 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 21 input pins
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 686 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 540 megabytes
+    Info: Processing ended: Thu Nov 22 08:56:48 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:08
+
+
